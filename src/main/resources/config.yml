@@ -1,0 +1,53 @@
+# if not true then vote sleep will not work
+vote-sleep: true
+vote-sleep-false-message: '&cVote sleep is disabled in the config'
+
+# if not true night skip animation will not happen
+night-skip-animation: true
+
+# if not true night skip sound wont work
+# for different sounds https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html copy sounds and paste
+Sounds:
+  night-skip-sound: true
+  night-skip-sound-name: 'UI_TOAST_CHALLENGE_COMPLETE'
+
+# if not true player can't use bed to initiated vote message
+if-player-bed-enter-use-command-sleep: true
+
+# if not true player can't see how many players voted after successful vote
+show-how-many-players-voted-on-successfull: true
+
+# if not true player can't see how many players voted after unsuccessful vote
+show-how-many-players-voted-on-unsuccessfull: true
+
+# messages change if needed (You can use & colors)
+making-day-message: '&b&lNight skip vote was successful, night skipping!'
+voting-unsuccessful-message: '&c&lNight skip vote unsuccessful'
+night-wait-message: '&bPlease wait till sun goes down'
+vote-sleep-repeat-denied-message: '&cVote already initiated once, please wait till vote finish'
+show-how-many-players-voted-on-successfull-message: '&aVote for Night Skip players'
+show-how-many-players-voted-on-unsuccessfull-message: '&cVote for stay Night players'
+if-voted-for-skip-message: '&fvoted for skip night'
+if-denied-for-skip-message: '&fdenied for skip night'
+already-voted-message: '&cYou already voted'
+config-reload-message: '&aConfig reloaded successfully'
+
+# No permissions message (You can use & colors)
+no-permissions-message: '&cYou do not have required permission'
+
+# change permission text if needed (don't use this '&' on permissions)
+player-perms-to-sleep: 'sleepifte.sleep'
+admin-perms-to-reload: 'sleepifte.reload'
+
+# change hover message
+# you can adjust this text by spacing until perfect
+# you can't use & colors in these text cause these text don't support
+vote-initiated-hover-msg: '                SKIP VOTE INITIATED!'
+
+# This doesn't need space, they are already in middle
+# you can't use & colors in these text cause these text don't support
+accept-hover: '[ACCEPT]'
+accept-text-on-hover: 'Click to Accept'
+deny-hover: '[DENY]'
+deny-text-on-hover: 'Click to Deny'
+

@@ -1,0 +1,8 @@
+name: HoverSleepPlugin
+version: '1.2'
+main: me.ifte.sleepplugin.Sleepplugin
+api-version: 1.18
+commands:
+  sleep:
+    description: Initiated vote sleep to all players.
+    aliases: s

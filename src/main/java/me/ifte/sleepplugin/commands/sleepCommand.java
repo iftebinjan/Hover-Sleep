@@ -26,13 +26,13 @@ public class sleepCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (!(sender instanceof Player)){
-            sender.sendMessage("you cant use sleep command from console");
+            Bukkit.getLogger().warning("you cant use sleep command from console");
             return true;
         }
         Player p = (Player) sender;
         if (Sleepplugin.getPlugin().getConfig().getBoolean("vote-sleep")){
             if (p.hasPermission(Sleepplugin.getPlugin().getConfig().getString("player-perms-to-sleep"))){
-                if (args.length == 0){
+                if (args.length > 0){
                     if (night(p.getWorld())){
                         if (!oncevoteInitiated.contains(p)){
                             for (Player sendmsg : Bukkit.getOnlinePlayers()){
@@ -112,7 +112,7 @@ public class sleepCommand implements CommandExecutor {
                     }
 
                 }
-                else if (args.length == 1){
+                else if (args.length > 1){
                     if (args[0].equalsIgnoreCase("accept") && night(p.getWorld())){
                         if (!didVote.contains(p.getName())){
                             allowedPlayerList.add(p.getName());

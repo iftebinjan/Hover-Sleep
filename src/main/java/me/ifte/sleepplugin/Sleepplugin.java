@@ -16,7 +16,6 @@ public final class Sleepplugin extends JavaPlugin {
 
         plugin = this;
 
-        getConfig().options().copyDefaults();
         saveDefaultConfig();
 
 

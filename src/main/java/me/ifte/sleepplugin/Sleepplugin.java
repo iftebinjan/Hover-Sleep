@@ -12,7 +12,8 @@ public final class Sleepplugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        
+        Metrics metrics = new Metrics(this, Code); //replace your Bstats code here.
 
         plugin = this;
 

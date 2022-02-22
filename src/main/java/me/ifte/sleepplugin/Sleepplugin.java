@@ -8,6 +8,7 @@ public final class Sleepplugin extends JavaPlugin {
 
 
     private static Sleepplugin plugin;
+    boolean hasUpdate;
 
 
     @Override
@@ -15,12 +16,19 @@ public final class Sleepplugin extends JavaPlugin {
         // Plugin startup logic
 
         plugin = this;
+        hasUpdate = UpdateChecker.hasSpigotUpdate("98976");
 
         saveDefaultConfig();
 
 
         getCommand("sleep").setExecutor(new sleepCommand());
         getServer().getPluginManager().registerEvents(new playerBedListen(), this);
+        
+        
+        
+        if(hasUpdate){
+            Bukkit.getLogger().warning("Sleepplugin new version is available on Spigot!");
+        }
 
     }
 
